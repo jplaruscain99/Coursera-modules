@@ -11,6 +11,11 @@ $scope.lunchlist = "";
 $scope.message = "";
 
 $scope.displayMessage = function () {
+  if($scope.lunchlist === ""){
+    $scope.message = "Please enter data first";
+    return;
+  }
+
   var itemlist = $scope.lunchlist;
   var items =  itemlist.split(',');
 
